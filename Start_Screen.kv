@@ -1,0 +1,43 @@
+<Start_screen>:
+    BoxLayout:
+        orientation: 'vertical'
+        MDCard:
+            size_hint: None,None
+            size: 300,400
+            pos_hint: {"center_x":0.5,"center_y":0.5}
+            elevation: 30
+            spacing: 20
+            orientation: "vertical"
+            Image:
+                id:image_logo
+                source:"Logo.png"
+                size_hint: 0.4,0.4
+                pos_hint:{'center_x':0.5,'center_y':0.5}
+            MDLabel:
+                pos_hint: {"center_x":0.5,"center_y":0.5}
+                size_hint_y: None
+                height: 30
+                text: "Choose an Action:"
+                halign: "center"
+                font_size: 18
+            MDRoundFlatIconButton:
+                icon:'beaker-plus'
+                text: 'New Test'
+                pos_hint: {"center_x":0.5,"center_y":0.5}
+                size_hint_y:None
+                height:15
+                on_release: root.parent.current ='intrument-config'
+            MDRoundFlatIconButton:
+                icon:'application-import'
+                text: 'Import Configuration'
+                pos_hint: {"center_x":0.5,"center_y":0.5}
+                size_hint_y:None
+                height:15
+            MDLabel:
+                pos_hint: {"center_x":0.5,"center_y":0.5}
+                size_hint_y: None
+                height: 100
+        MDLabel:
+            pos_hint: {"center_x":0.5,"center_y":0.5}
+            size_hint_y: None
+            height: 60

@@ -1,0 +1,21 @@
+<User_Interface>:
+    orientation: 'vertical'
+    MDToolbar:
+        elevation:10
+        title: 'Test Configurator'
+
+    MDNavigationLayout:
+        ScreenManager:
+            id: root_screen
+            Start_Screen:
+                name: 'start_screen'
+            Instrument_config:
+                name: 'intrument-config'
+        MDNavigationDrawer:
+            id:nav_drw
+            BoxLayout:
+                orientation: "vertical"
+                padding: "8dp"
+                spacing: "8dp"
+                ScrollView:
+                    NavDrawerContent:
