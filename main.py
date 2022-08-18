@@ -60,9 +60,6 @@ class MyItem(IRightBody,GridLayout):
 class Instrument_config_list(MDList):
 
     def add_list(self):
-        print('ciao')
-        for i in range(5):
-            self.add_widget(CustomItem())
         return
     pass
 

@@ -10,7 +10,7 @@
                 elevation: 20
                 pos_hint:{'center_x':0.5,'center_y':0.5}
                 size_hint: None,None
-                size: 350,400
+                size: 300,400
                 MDLabel:
                     text:'Configure Power Supply Address'
                     bold: 'True'
@@ -18,6 +18,12 @@
                 ScrollView:
                     Instrument_config_list:
                         id: instrument_list
+                        OneLineIconListItem:
+                            text: 'Add Power supply'
+                            IconLeftWidget:
+                                icon: 'plus-circle-outline'
+                MDLabel:
+                    width: 5
         MDBottomNavigationItem:
             name: 'DAQ'
             text:  'DAQ/Agilent'
