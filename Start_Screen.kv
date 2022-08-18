@@ -26,7 +26,10 @@
                 pos_hint: {"center_x":0.5,"center_y":0.5}
                 size_hint_y:None
                 height:15
-                on_release: root.parent.current ='intrument-config'
+                on_release:
+                    root.parent.current ='instrument-config'
+                    root.parent.get_screen('instrument-config').ids.instrument.set_items()
+                    app.ciao()
             MDRoundFlatIconButton:
                 icon:'application-import'
                 text: 'Import Configuration'

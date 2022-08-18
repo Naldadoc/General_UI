@@ -1,10 +1,22 @@
 <Instrument_config>:
     MDBottomNavigation:
-        panel_color: .2,.2,.2,1
+        panel_color: 0.95,0.95,0.95,1
         MDBottomNavigationItem:
             name:'power_supply'
             text: 'Power Supply'
             icon: 'lightning-bolt'
+            MDCard:
+                orientation: 'vertical'
+                elevation: 20
+                pos_hint:{'center_x':0.5,'center_y':0.5}
+                size_hint: None,None
+                size: 350,400
+                MDLabel:
+                    text:'Configure Power Supply Address'
+                    bold: 'True'
+                    halign:'center'
+                Instrument_config_list:
+                    id: instrument
         MDBottomNavigationItem:
             name: 'DAQ'
             text:  'DAQ/Agilent'
@@ -21,3 +33,7 @@
             name: 'i/o_output'
             text: 'I/O management'
             icon: 'dip-switch'
+        MDBottomNavigationItem:
+            name: 'test_def'
+            text: 'Test configuration'
+            icon: 'tools'

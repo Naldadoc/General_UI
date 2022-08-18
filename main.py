@@ -5,11 +5,12 @@
 
 
 #imports
-from  kivymd.app import MDApp
+from kivymd.app import MDApp
 from kivy.lang import Builder
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.screenmanager import Screen,ScreenManager
-from kivymd.uix.list import MDList
+from kivymd.uix.list import MDList,OneLineAvatarListItem,IRightBodyTouch
+from kivy.uix.gridlayout import GridLayout
 from kivymd.uix.bottomnavigation import MDBottomNavigation
 
 class  General_UIApp(MDApp):
@@ -23,7 +24,11 @@ class  General_UIApp(MDApp):
         Builder.load_file('Start_screen.kv')
         Builder.load_file('NavDrawerContent.kv')
         Builder.load_file('Instrument_config.kv')
+        Builder.load_file('List_item.kv')
         return User_interface()
+    def ciao(self):
+        print('ciao')
+        return
 
     pass
 
@@ -40,8 +45,26 @@ class NavDrawerContent(MDList):
     pass
 
 
-class Instrument_config(Screen):
+class Supply_list_item(GridLayout,IRightBodyTouch):
     pass
+
+class MyItem(OneLineAvatarListItem):
+    pass
+
+
+class Instrument_config_list(MDList):
+
+    def set_items(self):
+        s = MyItem()
+        for i in range(2):
+            self.add_widget(s)
+            pass
+        return
+    pass
+
+
+
+
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':

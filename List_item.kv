@@ -1,0 +1,23 @@
+<MyItem>:
+    on_size:
+        self.ids._right_container.width = container.width
+        self.ids._right_container.x = container.width
+    Supply_list_item:
+        id: container
+
+<Supply_list_item>:
+    cols: 3
+    pos_hint:{'x':0}
+    row_default_height:50
+    row_force_default: True
+    width:300
+    MDLabel:
+        id: model
+        text: ''
+    MDLabel:
+        id: address
+        text: ''
+    MDTextField:
+        id: label_name
+        hint_text: 'label'
+        multiline: False
