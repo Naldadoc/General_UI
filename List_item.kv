@@ -19,3 +19,15 @@
     disabled: True
     MyItem:
         id:container
+
+<Add_instr_item>:
+    text: 'Add Power supply'
+    on_release: app.show_instrument_dialog()
+    IconLeftWidget:
+        icon: 'plus-circle-outline'
+
+<Instrument_item>:
+    address: self.address
+    on_release: app.add_list_item(app.root.ids.root_screen.current,self.text)
+    IconLeftWidget:
+        icon: 'atom-variant'
